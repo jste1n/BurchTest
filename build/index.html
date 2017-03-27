@@ -1,0 +1,360 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Welcome to PythonTDD’s documentation! &#8212; PythonTDD 1 documentation</title>
+    
+    <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="top" title="PythonTDD 1 documentation" href="#" />
+   
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head>
+  <body role="document">
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="welcome-to-pythontdd-s-documentation">
+<h1>Welcome to PythonTDD&#8217;s documentation!<a class="headerlink" href="#welcome-to-pythontdd-s-documentation" title="Permalink to this headline">¶</a></h1>
+<p>Contents:</p>
+<div class="toctree-wrapper compound">
+</div>
+</div>
+<div class="section" id="indices-and-tables">
+<h1>Indices and tables<a class="headerlink" href="#indices-and-tables" title="Permalink to this headline">¶</a></h1>
+<ul class="simple">
+<li><a class="reference internal" href="genindex.html"><span class="std std-ref">Index</span></a></li>
+<li><a class="reference internal" href="py-modindex.html"><span class="std std-ref">Module Index</span></a></li>
+<li><a class="reference internal" href="search.html"><span class="std std-ref">Search Page</span></a></li>
+</ul>
+</div>
+<div class="section" id="module-bruch.Bruch">
+<span id="bruch-module"></span><h1>bruch module<a class="headerlink" href="#module-bruch.Bruch" title="Permalink to this headline">¶</a></h1>
+<dl class="class">
+<dt id="bruch.Bruch.Bruch">
+<em class="property">class </em><code class="descclassname">bruch.Bruch.</code><code class="descname">Bruch</code><span class="sig-paren">(</span><em>zaehler</em>, <em>nenner=None</em><span class="sig-paren">)</span><a class="headerlink" href="#bruch.Bruch.Bruch" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">object</span></code></p>
+<p>Bruch überschreibt unzählige standard-Methoedn um sie an Bruchrechnung anzupassen.
+Zum Beispiel :
+- <strong>methods</strong> für brüche:
+* :func:__eq__ : liefert true wenn zähler und nenner gleich sind
+* :func:__abs__ : macht einen negativen bruch positiv
+* :func:__float__ : liefert das Gleitkommaäquivalent zum bruch</p>
+<dl class="method">
+<dt id="bruch.Bruch.Bruch._Bruch__makeBruch">
+<code class="descname">_Bruch__makeBruch</code><span class="sig-paren">(</span><em>value</em><span class="sig-paren">)</span><a class="headerlink" href="#bruch.Bruch.Bruch._Bruch__makeBruch" title="Permalink to this definition">¶</a></dt>
+<dd><p>private Methode die einen Bruch über die Eingabe eines einzelnen Wert erstellen lässt. Wirft einen TypeError, falls ein String übergeben wird
+:return: neuen Bruch</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="bruch.Bruch.Bruch.__abs__">
+<code class="descname">__abs__</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#bruch.Bruch.Bruch.__abs__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Überschreibt die  Methode abs, sodass ein neuer Bruch mit dem Betrag das alten Nenners und dem Betrag des altern Zählers zurück gegeben wird.
+:return: Neuer Bruch</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="bruch.Bruch.Bruch.__add__">
+<code class="descname">__add__</code><span class="sig-paren">(</span><em>other</em><span class="sig-paren">)</span><a class="headerlink" href="#bruch.Bruch.Bruch.__add__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Überschreibt die Methode add, sodass ein Bruch zurück gegeben wird der nach den Bruchrechenregeln eine korrekte Summe zweier Brüche darstellt.
+:param other: Bruch der addiert wird
+:return: neuen Bruch = addition von self und other</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="bruch.Bruch.Bruch.__complex__">
+<code class="descname">__complex__</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#bruch.Bruch.Bruch.__complex__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Überschreibt die Methode complex, sodass complex auf den Gleitkommawert des Bruchs angewendet wird.
+:return:</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="bruch.Bruch.Bruch.__eq__">
+<code class="descname">__eq__</code><span class="sig-paren">(</span><em>other</em><span class="sig-paren">)</span><a class="headerlink" href="#bruch.Bruch.Bruch.__eq__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Überschreiben der equals-methode , sodass sie true zurückgibt wenn zähler und nenner eines bruchs gleich sind
+:param other:
+:return: True wenn Zähler und Nenner eines Bruchs gleich sind.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="bruch.Bruch.Bruch.__float__">
+<code class="descname">__float__</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#bruch.Bruch.Bruch.__float__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Überschreibt die methode float, sodass sie den Gleitkommawert des Bruchs zurück gibt
+:return: Gleitkommawert des Brcuhs</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="bruch.Bruch.Bruch.__ge__">
+<code class="descname">__ge__</code><span class="sig-paren">(</span><em>other</em><span class="sig-paren">)</span><a class="headerlink" href="#bruch.Bruch.Bruch.__ge__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Überschreibt die Methode ge, sodass 2 Brüche verglichen werden können.
+:param other:
+:return: True wenn gleitkomma self &gt;= gleitkomma other</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="bruch.Bruch.Bruch.__gt__">
+<code class="descname">__gt__</code><span class="sig-paren">(</span><em>other</em><span class="sig-paren">)</span><a class="headerlink" href="#bruch.Bruch.Bruch.__gt__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Überschreibt die Methode gt, sodass 2 Brüche verglichen werden können.
+:param other:
+:return: True wenn gleitkomma self &gt; gleitkomma other</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="bruch.Bruch.Bruch.__iadd__">
+<code class="descname">__iadd__</code><span class="sig-paren">(</span><em>other</em><span class="sig-paren">)</span><a class="headerlink" href="#bruch.Bruch.Bruch.__iadd__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Überschreibt die Methode iadd, sodass es möglich ist den += Operator zu verwenden
+:param other: zweiter Bruch
+:return: neuen Bruch = addition von self und other</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="bruch.Bruch.Bruch.__imul__">
+<code class="descname">__imul__</code><span class="sig-paren">(</span><em>other</em><span class="sig-paren">)</span><a class="headerlink" href="#bruch.Bruch.Bruch.__imul__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Überschreibt die Methode itruediv, sodass es möglich ist den <a href="#id1"><span class="problematic" id="id2">*</span></a>= Operator  zu verwenden
+:param other:
+:return: neuer Bruch, Ergebnis der Multiplikation</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="bruch.Bruch.Bruch.__init__">
+<code class="descname">__init__</code><span class="sig-paren">(</span><em>zaehler</em>, <em>nenner=None</em><span class="sig-paren">)</span><a class="headerlink" href="#bruch.Bruch.Bruch.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>__init__ nimmt als Konstruktor einen zähler und einen nenner, mit dem standard-wert none, entgegen.
+danach wird die Validität der einzelnen Parameter überprüft und gegebenenfalls (nenner = 0, nenner oder zähler ist float)
+eine Exception geworfen. falls nicht 2 int-werte sondern nur 1 bruch objekt übergeben wurde bleibt der nenner none und
+es werden zähler und nenner aus dem objekt eingelesen.
+wird bloß 1 int wert übergeben wird der nenner auf 1 gesetzt (ganze zahl)</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>zaehler</strong> &#8211; zähler bzw ganze zahl</li>
+<li><strong>nenner</strong> &#8211; nenner bzw none</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="bruch.Bruch.Bruch.__int__">
+<code class="descname">__int__</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#bruch.Bruch.Bruch.__int__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Überschreibt die methode int, sodass sie den Ganzzahligenwert des Bruchs zurück gibt
+:return: Ganzzahligenwert des Bruchs</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="bruch.Bruch.Bruch.__invert__">
+<code class="descname">__invert__</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#bruch.Bruch.Bruch.__invert__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Überschreibt die Methode invert, sodass der Bruch mit vertauschtem Zähler und Nenner zurückgegeben wird
+:return: Bruch(self.nenner,self.zaehler)</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="bruch.Bruch.Bruch.__isub__">
+<code class="descname">__isub__</code><span class="sig-paren">(</span><em>other</em><span class="sig-paren">)</span><a class="headerlink" href="#bruch.Bruch.Bruch.__isub__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Überschreibt die Methode itruediv, sodass es möglich ist eine ganze Zahl von einem Bruch abzuziehen
+:param other:
+:return: Egebnis der Subtraktion</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="bruch.Bruch.Bruch.__iter__">
+<code class="descname">__iter__</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#bruch.Bruch.Bruch.__iter__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Überschreibt die Methode iter, sodass man Brüche in Listen zurückgeben kann.
+:return: Listenelemente</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="bruch.Bruch.Bruch.__itruediv__">
+<code class="descname">__itruediv__</code><span class="sig-paren">(</span><em>other</em><span class="sig-paren">)</span><a class="headerlink" href="#bruch.Bruch.Bruch.__itruediv__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Überschreibt die Methode itruediv, sodass es möglich ist den =/ Operator  zu verwenden
+:param other:
+:return: Neuer Bruch, Ergebnis der Division self other</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="bruch.Bruch.Bruch.__le__">
+<code class="descname">__le__</code><span class="sig-paren">(</span><em>other</em><span class="sig-paren">)</span><a class="headerlink" href="#bruch.Bruch.Bruch.__le__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Überschreibt die Methode le, sodass 2 Brüche verglichen werden können.
+:param other:
+:return:True wenn gleitkomma self &lt;= gleitkomma other</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="bruch.Bruch.Bruch.__lt__">
+<code class="descname">__lt__</code><span class="sig-paren">(</span><em>other</em><span class="sig-paren">)</span><a class="headerlink" href="#bruch.Bruch.Bruch.__lt__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Überschreibt die Methode lt, sodass 2 Brüche verglichen werden können.
+:param other:
+:return: True wenn gleitkomma self &lt; gleitkomma other</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="bruch.Bruch.Bruch.__mul__">
+<code class="descname">__mul__</code><span class="sig-paren">(</span><em>other</em><span class="sig-paren">)</span><a class="headerlink" href="#bruch.Bruch.Bruch.__mul__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Überschreib die Methode mul, sodass es möglich ist 2 Brüche, gemäß der Bruchrechenregeln, zu multiplizieren
+:param other:
+:return: neuer Bruch, Ergebnis der Multiplikation self other</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="bruch.Bruch.Bruch.__neg__">
+<code class="descname">__neg__</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#bruch.Bruch.Bruch.__neg__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Überschreibt die Methode neg, sodass der Bruch invertiert, also mit -1 multipliziert, wird und gibt ihn zurück.
+:return: neuer negierter Bruch</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="bruch.Bruch.Bruch.__pow__">
+<code class="descname">__pow__</code><span class="sig-paren">(</span><em>power</em>, <em>modulo=None</em><span class="sig-paren">)</span><a class="headerlink" href="#bruch.Bruch.Bruch.__pow__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Überschreibt die Methode, sodass der Bruch hoch einer Zahl gehoben wird. Dabei werden je nenner und zähler potenziert
+:param power: potenz
+:param modulo: modulo=None weil kein Modulo benötigt wird
+:return: Bruch hoch der Potenz</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="bruch.Bruch.Bruch.__radd__">
+<code class="descname">__radd__</code><span class="sig-paren">(</span><em>other</em><span class="sig-paren">)</span><a class="headerlink" href="#bruch.Bruch.Bruch.__radd__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Überschreibt die Methode radd, sodass es möglich ist einen Bruch, konform der Bruchrechenregeln, mit einer ganze Zahl zu multiplizieren
+:param other:
+:return: Bruch multipliziert mit einer ganzen Zahl</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="bruch.Bruch.Bruch.__rmul__">
+<code class="descname">__rmul__</code><span class="sig-paren">(</span><em>other</em><span class="sig-paren">)</span><a class="headerlink" href="#bruch.Bruch.Bruch.__rmul__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Überschreibt die Methode div, sodass es möglich is einen Bruch, konform der Bruchrechenregeln, mit einer ganzen Zahl zu multiplizieren
+:param other:
+:return: neuer Bruch, Ergebnis der Multiplikation</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="bruch.Bruch.Bruch.__rsub__">
+<code class="descname">__rsub__</code><span class="sig-paren">(</span><em>other</em><span class="sig-paren">)</span><a class="headerlink" href="#bruch.Bruch.Bruch.__rsub__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Überschreibt die Methode itruediv, sodass es möglich ist den -= Operator  zu verwenden
+:param other:
+:return: Ergebnis der Subtraktion</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="bruch.Bruch.Bruch.__rtruediv__">
+<code class="descname">__rtruediv__</code><span class="sig-paren">(</span><em>other</em><span class="sig-paren">)</span><a class="headerlink" href="#bruch.Bruch.Bruch.__rtruediv__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Überschreibt die Methode div, sodass es möglich is einen Bruch, konform der Bruchrechenregeln, durch eine ganze Zahl zu dividieren
+:param other:
+:return:</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="bruch.Bruch.Bruch.__str__">
+<code class="descname">__str__</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#bruch.Bruch.Bruch.__str__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Überschreibt die Methode String, sodass der Bruch in formatierter Form ausgegeben wird. Falls es sich um eine ganze Zahl handelt wird nur der Zähler zurückgegeben.
+:return: Formatierter String des Bruchs</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="bruch.Bruch.Bruch.__sub__">
+<code class="descname">__sub__</code><span class="sig-paren">(</span><em>other</em><span class="sig-paren">)</span><a class="headerlink" href="#bruch.Bruch.Bruch.__sub__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Überschreibt die Methode itruediv, sodass zwei Brüche, gemäß der Bruchrechenregeln, subtrahiert werden können.
+:param other:
+:return: Neuer Bruch, Ergebnis der Subtraktion</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="bruch.Bruch.Bruch.__truediv__">
+<code class="descname">__truediv__</code><span class="sig-paren">(</span><em>other</em><span class="sig-paren">)</span><a class="headerlink" href="#bruch.Bruch.Bruch.__truediv__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Überschreibt die Methode div, sodass es möglich ist zwei Brüche, konform der Bruchrechenregeln, durcheinander zu dividieren
+:param other:
+:return: neuer Bruch der durch die Division entstanden ist</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="#">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Welcome to PythonTDD&#8217;s documentation!</a></li>
+<li><a class="reference internal" href="#indices-and-tables">Indices and tables</a></li>
+<li><a class="reference internal" href="#module-bruch.Bruch">bruch module</a></li>
+</ul>
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="#">Documentation overview</a><ul>
+  </ul></li>
+</ul>
+</div>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/index.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <form class="search" action="search.html" method="get">
+      <div><input type="text" name="q" /></div>
+      <div><input type="submit" value="Go" /></div>
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2016, Hauer Miriam.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 1.4.8</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.9</a>
+      
+      |
+      <a href="_sources/index.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>
